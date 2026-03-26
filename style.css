@@ -1,0 +1,212 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f5f7fb;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #4b7bec;
+  color: #fff;
+  padding: 15px 30px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav h1 {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+#nav-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#nav-user:hover {
+  transform: scale(1.05);
+}
+
+#profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+#profile-pic :hover {
+    transform: scale(1.05);
+}
+
+/* MAIN LAYOUT */
+main {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+}
+
+/* FEED */
+#feed {
+  flex: 3;
+}
+
+#feed h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* SEARCH BAR */
+#search-posts {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#search-posts:focus {
+  border-color: #4b7bec;
+  box-shadow: 0 0 6px rgba(75, 123, 236, 0.3);
+  outline: none;
+}
+
+/* POSTS */
+.post {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.post h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.post p {
+  margin-bottom: 12px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* POST ACTIONS */
+.post-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.post-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.like-btn {
+  background-color: #4b7bec;
+  color: #fff;
+}
+
+.delete-btn {
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+.post-actions button:hover {
+  transform: translateY(-1px);
+}
+
+/* CREATE POST PANEL */
+#create-post {
+  flex: 1;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+}
+
+#create-post h3 {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+#create-post input,
+#create-post textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#create-post input:focus,
+#create-post textarea:focus {
+  border-color: #20bf6b;
+  box-shadow: 0 0 6px rgba(32, 191, 107, 0.3);
+  outline: none;
+}
+
+#create-post textarea {
+  resize: none;
+  height: 120px;
+}
+
+#create-post button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #20bf6b;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#create-post button:hover {
+  background: #1aa55d;
+  transform: translateY(-1px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+}
